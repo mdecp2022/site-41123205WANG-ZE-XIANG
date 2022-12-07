@@ -1,8 +1,6 @@
-<h1>Abou</h1>
+<h1>About</h1>
 <p>cmsite: wcms use <a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a> as submodule</p>
 <h1>cp2022</h1>
-<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/7ba3ef69bc190042d8a6198655edaf90/raw/48221186c1dc5f71493282e7c624b07a8e59c64d/radom_draw_1b.py&amp;
-src2=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/7ba3ef69bc190042d8a6198655edaf90/raw/48221186c1dc5f71493282e7c624b07a8e59c64d/list_1b_static_site.py">test</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
@@ -288,7 +286,161 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div id="brython_div2"></div>
 <!-- editor2 結束 --><hr/>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-<h1>Brython</h1>
+<div id="gtx-trans" style="position: absolute; left: -20px; top: 71.8125px;">
+<div class="gtx-trans-icon"></div>
+</div>
+<h1>HW</h1>
+<h2>W5</h2>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/ef23e7b5f67a4b37ba3e9b33d3feda7f/raw/22fcfbe901eaccab66f56d87d6e2a8a12896c741/random.py">密碼亂數</a></p><h2>W6</h2>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/7ba3ef69bc190042d8a6198655edaf90/raw/48221186c1dc5f71493282e7c624b07a8e59c64d/radom_draw_1b.py&amp;src2=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/7ba3ef69bc190042d8a6198655edaf90/raw/48221186c1dc5f71493282e7c624b07a8e59c64d/list_1b_static_site.py">抽點</a></p><h2>W10</h2>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/8bfe3d9032808946de65c635da94c1d7/raw/733248130d26dff6e7ba22d1f010dc261cf87686/%25E8%2580%2583%25E8%25A9%25A6%25E8%25AA%25BF%25E6%259F%25A5.py">考試調查</a></p><h2>W11</h2>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/fd1825264b2cd3b7a7cd5d8814eaeb95/raw/911c4bfa2207cc24a0fe16bc66b1460db7f81659/%25E8%2580%2583%25E8%25A9%25A6%25E7%25B5%2590%25E6%259E%259C.py">考試結果</a></p>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/fd1825264b2cd3b7a7cd5d8814eaeb95/raw/911c4bfa2207cc24a0fe16bc66b1460db7f81659/%25E7%25B9%25AA%25E5%259C%2596.py">繪圖</a></p><h2>W12</h2>
+<h3>w12-1</h3>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+</script>
+</p>
+<h3>w12-2</h3>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">取使用者輸入</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    brython_div <= user_input_temp
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p>
+<h3>w12-3</h3>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">取使用者輸入</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document, ajax
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def complete(request):
+    pass
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    url = "http://127.0.0.1:8080/?temp=" + user_input_temp
+    ajax.get(url, oncomplete=complete)
+    brython_div <= "已經透過 AJAX 採 GET 將溫度輸入值送到 server"
+    brython_div <= html.BR()
+    brython_div <= user_input_temp
+    brython_div <= html.BR()
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p>
+<!--
+以下為 Flask 伺服器端的程式碼
+from flask import Flask, request 
+from flask_cors import CORS
+  
+app = Flask(__name__)
+CORS(app)
+@app.route('/', methods=['GET'])
+def index():
+    # 利用 Flask request 取得 GET 模式下的 temp 變數值
+    # 若 temp 無值, 則內定為 "30"
+    temp = request.args.get('temp', default="30")
+    # 當使用者在瀏覽器執行 Brython 程式時, 可以利用 GET 將 temp 變數值傳給 server 端的 Flask Python 程式
+    # 若瀏覽器前端採 form 表單取值, 則 Flask 可以 request.form.get() 取值
+    return "已經取得 temp: " + str(temp)
+  
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
+-->
+<h2>W13</h2>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/1ecfe324e8fc977bf37b2e61936bfbc0/raw/8ee4a2fd8332c61d269386209cb7c5e6072e106d/w13%25E6%25BA%25AB%25E5%25BA%25A6%25E8%25BD%2589%25E6%258F%259B%25E7%25A8%258B%25E5%25BC%258Fex1.py">w13溫度轉換ex1</a></p>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/1ecfe324e8fc977bf37b2e61936bfbc0/raw/8ee4a2fd8332c61d269386209cb7c5e6072e106d/w13%25E6%25BA%25AB%25E5%25BA%25A6%25E8%25BD%2589%25E6%258F%259Bex2.py" title="w13溫度轉換ex2">w13溫度轉換ex2</a></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
