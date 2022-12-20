@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='cp2022.html'>cp2022</a><li class='has-children'><a href='HW.html'>HW</a><ul class='dropdown'><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li><a href='W10.html'>W10</a><li><a href='W11.html'>W11</a><li class='has-children'><a href='W12.html'>W12</a><ul class='dropdown'><li><a href='w12-1.html'>w12-1</a><li><a href='w12-2.html'>w12-2</a><li><a href='w12-3.html'>w12-3</a></li></ul><li><a href='W13.html'>W13</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='cp2022.html'>cp2022</a><li class='has-children'><a href='HW.html'>HW</a><ul class='dropdown'><li><a href='w15.html'>w15</a><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li><a href='W10.html'>W10</a><li><a href='W11.html'>W11</a><li class='has-children'><a href='W12.html'>W12</a><ul class='dropdown'><li><a href='w12-1.html'>w12-1</a><li><a href='w12-2.html'>w12-2</a><li><a href='w12-3.html'>w12-3</a></li></ul><li><a href='W13.html'>W13</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,7 +142,25 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W11 << <a href='W11.html'>Previous</a> <a href='w12-1.html'>Next</a> >> w12-1<br /><h1>W12</h1>
-<br />W11 << <a href='W11.html'>Previous</a> <a href='w12-1.html'>Next</a> >> w12-1</div>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/Brython.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/da08e80e7d4ebe0b28ea8182217cc06f/raw/a750eedf771a647f80d43635765cb92e627af4d8/w12_hw.py">ex1</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+print(type(user_input_temp))</pre>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/Brython.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/da08e80e7d4ebe0b28ea8182217cc06f/raw/40eafa1fc38ba60adb177ae1b0b0bd9a5cec4781/w12_hw_ex2.py">ex2</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+print(type(user_input_temp))
+# 到這裡已知利用 input() 函式將傳回字串, 接著以 float() 將字串轉為浮點數
+user_input_temp = float(user_input_temp)
+# 因為攝氏溫度乘上 9/5 之後再加上 32 就可以得到對應的華氏溫度值
+Fahrenheit = (user_input_temp*9/5) + 32
+# 到這裡, Fahrenheit 資料型別為浮點數, 而 user_input_temp 在第 8 行也轉為浮點數
+# 要將兩個浮點數與字串相加, 都必須透過 str() 轉為字串
+print("攝氏 " + str(user_input_temp) + " 度, 等於華氏 " + str(Fahrenheit) + " 度.")
+    </pre>
+<p></p><br />W11 << <a href='W11.html'>Previous</a> <a href='w12-1.html'>Next</a> >> w12-1</div>
         
     <!-- footer -->
       <div class="container">

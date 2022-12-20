@@ -290,13 +290,31 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div class="gtx-trans-icon"></div>
 </div>
 <h1>HW</h1>
-<h2>W5</h2>
+<h2>w15</h2><h2>W5</h2>
 <p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/ef23e7b5f67a4b37ba3e9b33d3feda7f/raw/22fcfbe901eaccab66f56d87d6e2a8a12896c741/random.py">密碼亂數</a></p><h2>W6</h2>
 <p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/7ba3ef69bc190042d8a6198655edaf90/raw/48221186c1dc5f71493282e7c624b07a8e59c64d/radom_draw_1b.py&amp;src2=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/7ba3ef69bc190042d8a6198655edaf90/raw/48221186c1dc5f71493282e7c624b07a8e59c64d/list_1b_static_site.py">抽點</a></p><h2>W10</h2>
 <p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/8bfe3d9032808946de65c635da94c1d7/raw/733248130d26dff6e7ba22d1f010dc261cf87686/%25E8%2580%2583%25E8%25A9%25A6%25E8%25AA%25BF%25E6%259F%25A5.py">考試調查</a></p><h2>W11</h2>
 <p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/fd1825264b2cd3b7a7cd5d8814eaeb95/raw/911c4bfa2207cc24a0fe16bc66b1460db7f81659/%25E8%2580%2583%25E8%25A9%25A6%25E7%25B5%2590%25E6%259E%259C.py">考試結果</a></p>
 <p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/cp2022.html?scr=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/fd1825264b2cd3b7a7cd5d8814eaeb95/raw/911c4bfa2207cc24a0fe16bc66b1460db7f81659/%25E7%25B9%25AA%25E5%259C%2596.py">繪圖</a></p><h2>W12</h2>
-<h3>w12-1</h3>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/Brython.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/da08e80e7d4ebe0b28ea8182217cc06f/raw/a750eedf771a647f80d43635765cb92e627af4d8/w12_hw.py">ex1</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+print(type(user_input_temp))</pre>
+<p><a href="https://mdecp2022.github.io/site-41123205WANG-ZE-XIANG/content/Brython.html?src=https://gist.githubusercontent.com/41123205WANG-ZE-XIANG/da08e80e7d4ebe0b28ea8182217cc06f/raw/40eafa1fc38ba60adb177ae1b0b0bd9a5cec4781/w12_hw_ex2.py">ex2</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+print(type(user_input_temp))
+# 到這裡已知利用 input() 函式將傳回字串, 接著以 float() 將字串轉為浮點數
+user_input_temp = float(user_input_temp)
+# 因為攝氏溫度乘上 9/5 之後再加上 32 就可以得到對應的華氏溫度值
+Fahrenheit = (user_input_temp*9/5) + 32
+# 到這裡, Fahrenheit 資料型別為浮點數, 而 user_input_temp 在第 8 行也轉為浮點數
+# 要將兩個浮點數與字串相加, 都必須透過 str() 轉為字串
+print("攝氏 " + str(user_input_temp) + " 度, 等於華氏 " + str(Fahrenheit) + " 度.")
+    </pre>
+<p></p><h3>w12-1</h3>
 <!-- 
 在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
 -->
